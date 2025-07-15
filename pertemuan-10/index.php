@@ -6,11 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Modul 10</h1>
-    <a href="if.php" > kodingan if</a><br>
-    <a href="switch.php" > kodingan switch</a><br>
-    <a href="for.php" > kodingan for</a><br>
-    <a href="while.php" > kodingan while</a><br>
-    <a href="fungsi_parameter.php" > kodingan function parameter</a><br>
-    <a href="array.php" > kodingan array</a><br>
+    <p>halo saya dari php</p>
+<h3>Form Umur</h3>
+    <form method="POST">
+        <label for="umur">Masukkan umur:</label>
+        <input type="number" name="umur" id="umur" required>
+        <input type="submit" name="submit" value="Kirim">
+    </form>
+    <p>"haalo gaes"</p>
+
+    <?php
+    if (isset($_POST['submit'])) {
+        $umur = $_POST['umur'];
+
+
+        if ($umur >= 18) {
+            echo "<h3>Anda sudah dewasa.</h3>";
+        } else {
+            echo "<p>Anda masih anak-anak.</p>";
+        }
+    }
+    ?>
+</body>
 </html>
